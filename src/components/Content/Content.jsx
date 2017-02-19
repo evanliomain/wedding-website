@@ -1,19 +1,20 @@
 import React, { Component, PropTypes } from 'react';
 
-import HeaderContainer from '../containers/HeaderContainer';
+import HeaderContainer from '../../containers/HeaderContainer';
 
 import { className } from './Content.less';
 
 
-import { logo } from './Logo';
-
+import logoUrl from './blazon.png';
 
 export class Content extends Component {
 
   render() {
     return <div className={className}>
-      <HeaderContainer logo={logo}>
-        React Redux boilerplate {this.props.scroll}
+      <HeaderContainer logo={
+        <img src={logoUrl} alt="Blazon-evan-flora"/>
+      }>
+        Mariage Evan et Flora {this.props.scroll}
       </HeaderContainer>
       <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officia cum ratione, sed modi possimus, odio odit voluptatum quaerat id fuga, ad nulla consectetur eos ipsam quod deleniti porro soluta.

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { scrollChange } from '../actions';
 
-import { Content } from '../components/Content';
+import { Content } from '../components/Content/Content';
 
 const mapStateToProps    = state => state.scroll,
       mapDispatchToProps = dispatch => ({

@@ -79,6 +79,24 @@ module.exports = {
         'less-loader',
         'postcss-loader'
       ]
+    },
+    {
+      test    : /\.(png)$/i,
+      use     : [{
+        loader  : 'file-loader',
+        options : {
+          hash   : 'sha512',
+          digest : 'hex',
+          name   : '[hash].[ext]'
+        }
+      }, {
+        loader  : 'image-webpack-loader',
+        options : {
+          progressive : true,
+          gifsicle    : { interlaced : false },
+          optipng     : { optimizationLevel : 7 }
+        }
+      }]
     }]
   },
 

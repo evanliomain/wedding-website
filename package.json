@@ -40,5 +40,8 @@
     "stylelint": "^7.7.1",
     "webpack": "2",
     "webpack-dev-server": "2"
+  },
+  "devDependencies": {
+    "image-webpack-loader": "^3.2.0"
   }
 }
