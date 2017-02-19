@@ -9,6 +9,9 @@ import { AppContainer } from 'react-hot-loader';
 import { App }          from './components/App';
 import storeBoostrapper from './store-boostrapper';
 
+import './main.less';
+
+
 const store = storeBoostrapper();
 
 window.onload = () => renderComponent(App, store);

@@ -1,8 +1,9 @@
 /* eslint-env node */
 /* eslint-disable camelcase */
 
-const path    = require('path'),
-      webpack = require('webpack');
+const path              = require('path'),
+      webpack           = require('webpack'),
+      CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context : path.resolve(__dirname, '.'),
@@ -24,7 +25,7 @@ module.exports = {
   output : {
     path       : path.resolve(__dirname, './dist'),
     filename   : '[name].bundle.js',
-    publicPath : '/assets'
+    publicPath : '/dist/'
   },
 
   devtool   : 'cheap-module-eval-source-map',
@@ -35,7 +36,7 @@ module.exports = {
     contentBase : path.resolve(__dirname, './src'),
 
     // match the output `publicPath`
-    publicPath : '/assets'
+    publicPath : '/dist/'
   },
 
   resolve : {
@@ -79,15 +80,14 @@ module.exports = {
         'less-loader',
         'postcss-loader'
       ]
-    },
-    {
-      test    : /\.(png)$/i,
-      use     : [{
+    }, {
+      test : /\.(png)$/i,
+      use  : [{
         loader  : 'file-loader',
         options : {
           hash   : 'sha512',
           digest : 'hex',
-          name   : '[hash].[ext]'
+          name   : '[name]-[hash].[ext]'
         }
       }, {
         loader  : 'image-webpack-loader',
@@ -105,6 +105,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
 
     // prints more readable module names in the browser console on HMR updates
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+
+    new CopyWebpackPlugin([{
+      from : 'public/**/*'
+    }])
   ]
 };
