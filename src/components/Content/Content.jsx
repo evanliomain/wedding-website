@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 
 import HeaderContainer from '../../containers/HeaderContainer';
+import MainContentContainer from '../../containers/MainContentContainer';
+import SideMenuContainer from '../../containers/SideMenuContainer';
 
-import { className } from './Content.less';
+import { className, contentWrapper } from './Content.less';
 
 
 import logoUrl from './blazon.png';
@@ -16,9 +18,8 @@ export class Content extends Component {
       }>
         Mariage Evan et Flora {this.props.scroll}
       </HeaderContainer>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officia cum ratione, sed modi possimus, odio odit voluptatum quaerat id fuga, ad nulla consectetur eos ipsam quod deleniti porro soluta.
-      </div>
+      <MainContentContainer></MainContentContainer>
+      <SideMenuContainer></SideMenuContainer>
     </div>;
   }
 

@@ -44,6 +44,8 @@ function getHeaderScrollState(position) {
     headerLogoScale            : linear(1, 0.2, topDiff, position),
     headerLogoWrapperWidth     : linear(250, 50, topDiff, position),
     headerLogoWrapperTranslate : linear(55, 10, topDiff, position),
-    headerTitleScale           : linear(1, 0.4, topDiff, position)
+    headerTitleScale           : linear(1, 0.4, topDiff, position),
+
+    sideMenuTranslate : linear(200, 0, topDiff, position)
   };
 }
