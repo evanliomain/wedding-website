@@ -37,9 +37,10 @@ function getHeaderScroll(state, position) {
 
   return {
     headerTranslate            : -1 * position,
+    headerFontSize             : linear(4, 2, topDiff, position),
     headerLogoScale            : linear(1, 0.2, topDiff, position),
     headerLogoWrapperWidth     : linear(250, 50, topDiff, position),
-    headerLogoWrapperTranslate : linear(55, 70, topDiff, position),
+    headerLogoWrapperTranslate : linear(55, 10, topDiff, position),
     headerTitleScale           : linear(1, 0.4, topDiff, position)
   };
 }

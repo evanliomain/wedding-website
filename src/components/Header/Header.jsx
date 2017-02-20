@@ -32,31 +32,22 @@ export class Header extends Component {
           </div>
           <div className={titleWrapper}>
             <h1 style={{
-              transformOrigin : 'bottom left',
-              transform       : `scale(${this.props.headerTitleScale})`
+              fontSize : `${this.props.headerFontSize}em`
             }}>
               {this.props.children}
             </h1>
           </div>
+
         </div>
       </div>
     </header>;
   }
 }
 
-            // <img
-            //   style={{
-            //     transformOrigin : 'bottom left',
-            //     transform       : `scale(${this.props.headerLogoScale})`
-            //   }}
-            //   className="logo"
-            //   src={logoSvg}
-            //   alt="logo"/>
-
-
 Header.propTypes = {
   logo : PropTypes.node,
 
+  headerFontSize             : PropTypes.number,
   headerTranslate            : PropTypes.number,
   headerLogoScale            : PropTypes.number,
   headerLogoWrapperWidth     : PropTypes.number,
