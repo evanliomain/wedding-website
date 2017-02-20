@@ -31,10 +31,13 @@ export const scroll = (
 };
 
 function getHeaderScroll(state, position) {
-  if (topDiff < position) {
+  if (topDiff <= state.scroll && topDiff <= position) {
     return state;
   }
+  return getHeaderScrollState(Math.min(position, topDiff));
+}
 
+function getHeaderScrollState(position) {
   return {
     headerTranslate            : -1 * position,
     headerFontSize             : linear(4, 2, topDiff, position),
