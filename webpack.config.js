@@ -33,6 +33,8 @@ module.exports = {
     // enable HMR on the server
     hot : true,
 
+    historyApiFallback : true,
+
     contentBase : path.resolve(__dirname, './src'),
 
     // match the output `publicPath`
@@ -60,7 +62,7 @@ module.exports = {
           options : {
             modules        : true,
             importLoaders  : 1,
-            localIdentName : '[path][name]__[local]--[hash:base64:5]'
+            localIdentName : '[path][name]__[local]'
           }
         },
         'postcss-loader'
@@ -74,7 +76,7 @@ module.exports = {
           options : {
             modules        : true,
             importLoaders  : 1,
-            localIdentName : '[path][name]__[local]--[hash:base64:5]'
+            localIdentName : '[path][name]__[local]'
           }
         },
         'less-loader',
@@ -97,6 +99,39 @@ module.exports = {
           optipng     : { optimizationLevel : 7 }
         }
       }]
+    }, {
+      test : /\.json$/,
+      use  : [{
+        loader : 'json-loader'
+      }]
+    }, {
+      test : /\.md$/,
+      use  : [{
+        loader : 'raw-loader'
+      }]
+    }, {
+      test : /\.svg$/,
+      use  : [
+        'babel-loader',
+        {
+          loader  : 'react-svg-loader',
+          options : {
+            svgo : {
+              plugins        : [{
+                cleanupIDs           : false,
+                removeTitle          : true,
+                removeElementsByAttr : [{
+                  class : [
+                    'layout-background',
+                    'layout-limit',
+                    'layout-grid'
+                  ]
+                }]
+              }]
+            }
+          }
+        }
+      ]
     }]
   },
 

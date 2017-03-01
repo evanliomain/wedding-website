@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import { Link } from 'react-router';
+
 import { className } from './SideMenu.less';
 
 export class SideMenu extends Component {
@@ -11,11 +13,12 @@ export class SideMenu extends Component {
       }}
       className={className}>
       <ul>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-        <li>Link 4</li>
-        <li>Link 5</li>
+        <li><Link to="/">Présentation des lieux</Link></li>
+        <li><Link to="/about">Conseils sur les costumes</Link></li>
+        <li>Adresses locations/ventes de costumes</li>
+        <li>Carte des lieux et hébergements aux alentours</li>
+        <li>Liste de voeux des mariés</li>
+        <li>Partenaires</li>
       </ul>
     </div>;
   }

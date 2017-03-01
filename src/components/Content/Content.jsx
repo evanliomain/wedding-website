@@ -4,7 +4,7 @@ import HeaderContainer from '../../containers/HeaderContainer';
 import MainContentContainer from '../../containers/MainContentContainer';
 import SideMenuContainer from '../../containers/SideMenuContainer';
 
-import { className, contentWrapper } from './Content.less';
+import { className } from './Content.less';
 
 
 import logoUrl from './blazon.png';
@@ -16,9 +16,12 @@ export class Content extends Component {
       <HeaderContainer logo={
         <img src={logoUrl} alt="Blazon-evan-flora"/>
       }>
-        Mariage Evan et Flora {this.props.scroll}
+        Mariage Evan et Flora
+        {/* {this.props.scroll}*/}
       </HeaderContainer>
-      <MainContentContainer></MainContentContainer>
+      <MainContentContainer>
+        {this.props.children}
+      </MainContentContainer>
       <SideMenuContainer></SideMenuContainer>
     </div>;
   }

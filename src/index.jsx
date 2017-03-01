@@ -1,49 +1,39 @@
 /* global module, require, process */
 
-import React from 'react';
-
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { AppContainer } from 'react-hot-loader';
+import { browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 
 import { App }          from './components/App';
 import storeBoostrapper from './store-boostrapper';
+import { renderComponent } from './app-helpers';
+
 
 import './main.less';
 
 
 const store = storeBoostrapper();
 
-window.onload = () => renderComponent(App, store);
+// Create an enhanced history that syncs navigation events with the store
+const history = syncHistoryWithStore(browserHistory, store);
+
+window.onload = () => renderComponent(
+  App,
+  store,
+  history,
+  document.getElementById('app')
+);
 
 // Hot Module Replacement API
 if ('production' !== process.env.NODE_ENV && module.hot) {
-  module.hot.accept('./components/App', () => hotReload(store));
+  hotReload(store);
 }
 
 
 function hotReload(storeInstance) {
   module.hot.accept('./components/App', () => renderComponent(
     require('./components/App').App,
-    storeInstance
-  ));
-}
-
-function renderComponent(Component, storeInstance) {
-  if ('production' === process.env.NODE_ENV) {
-    return render(
-      <Provider store={storeInstance}>
-        <Component />
-      </Provider>,
-      document.getElementById('app')
-    );
-  }
-  return render(
-    <AppContainer>
-      <Provider store={storeInstance}>
-        <Component />
-      </Provider>
-    </AppContainer>,
+    storeInstance,
+    history,
     document.getElementById('app')
-  );
+  ));
 }
