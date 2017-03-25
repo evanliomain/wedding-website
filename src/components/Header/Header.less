@@ -1,29 +1,46 @@
-@headerHeight: 250px;
-@logoHeight: 250px;
-// @headerBg : #D50000;
-@headerBg : #decfb7;
+@headerHeight: 20vw;
+@logoHeight: 20vw;
+@headerBg : #ffffff;
 
 :local(.className) {
-  position: fixed;
   z-index: 1;
 
   top: 0;
   left: 0;
   width: 100%;
   height: @headerHeight;
-  color: #fff;
+  color: #000;
   background-color: @headerBg;
 
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4);
+  background:
+    // linear-gradient(to right, rgba(255,0,0,0), rgba(255,255,255,1)),
+    // linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,255,255,1)),
+
+    linear-gradient(
+      to bottom,
+      rgba(237,237,237,0.42) 0%,
+      rgba(245,245,245,0.8) 70%,
+      rgba(255,255,255,0.95) 100%),
+    url(/dist/public/bg/old-brown-vintage-parchment-paper-texture.jpg)
+    no-repeat center center fixed;
+
+
+  // background-size: contain cover;
+
+  border-bottom: 1px solid #a32825;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
 
   transition-duration: 0ms;
+  transform-origin: left bottom;
 }
 
 :local(.logoWrapper) {
   position: relative;
 
-  width: 250px;
+  width: @logoHeight;
+
   transform: translateY(55px);
+  transform-origin: left bottom;
 
   > div > * {
     height: @logoHeight;
@@ -35,16 +52,16 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
+  transform-origin: left bottom;
 
   margin-left: 1em;
   flex: 1;
 
   h1 {
     font-family: "minster", Helvetica, Arial, serif;
-    font-size: 4em;
+    font-size: 7vw;
     margin: 0;
     padding: 0;
-    text-shadow: 2px 2px 2px #000;
     width: 100%;
   }
 }

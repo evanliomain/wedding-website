@@ -9,7 +9,7 @@ export class Header extends Component {
   render() {
     return <header
       style={{
-        transform : `translate3d(0px, ${this.props.headerTranslate}px, 0px)`
+        transform : `translateY(${this.props.headerTranslate}px)`
       }}
       className={className}>
       <div
@@ -17,11 +17,12 @@ export class Header extends Component {
         <div
           className={toolbar}>
           <div
+            className={logoWrapper}
             style={{
-              width     : `${this.props.headerLogoWrapperWidth}px`,
-              transform : `translateY(${this.props.headerLogoWrapperTranslate}px)`
-            }}
-            className={logoWrapper}>
+              transform :
+                `translateY(${this.props.headerLogoWrapperTranslate}vw)
+                 scale(${this.props.headerLogoScale})`
+            }}>
             <div
               style={{
                 transformOrigin : 'bottom left',
@@ -30,9 +31,13 @@ export class Header extends Component {
               {this.props.logo}
             </div>
           </div>
-          <div className={titleWrapper}>
+          <div className={titleWrapper}
+               style={{
+                 transform :
+                  `translateX(${this.props.headerTranslateX}vw)
+                   scale(${this.props.headerFontScale})`
+               }}>
             <h1 style={{
-              fontSize : `${this.props.headerFontSize}em`
             }}>
               {this.props.children}
             </h1>
@@ -44,6 +49,7 @@ export class Header extends Component {
   }
 }
 
+              // fontSize  : `${this.props.headerFontSize}em`
 Header.propTypes = {
   logo : PropTypes.node,
 
@@ -52,5 +58,7 @@ Header.propTypes = {
   headerLogoScale            : PropTypes.number,
   headerLogoWrapperWidth     : PropTypes.number,
   headerLogoWrapperTranslate : PropTypes.number,
-  headerTitleScale           : PropTypes.number
+  headerTitleScale           : PropTypes.number,
+  headerTranslateX           : PropTypes.number,
+  headerFontScale            : PropTypes.number
 };

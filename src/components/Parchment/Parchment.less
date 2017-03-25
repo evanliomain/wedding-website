@@ -1,21 +1,73 @@
 :local(.wrapper) {
-
-  filter: drop-shadow(4px 5px 7px rgba(0,0,0,0.5));
 }
 
 :local(.content) {
-  padding: 2em;
+  display: block;
 
-  background-image: url('/dist/public/bg/parchment.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  > div {
+    padding-top: 1em;
 
-  mask-border: url('/dist/public/bg/ParchmentBorder.svg') 150 stretch;
-
-  div {
     &::first-letter {
       font-family: "minster", Helvetica, Arial, serif;
-      font-size: 2em;
+      font-size: 3em;
+    }
+
+    h1 {
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 0.5em;
+    }
+
+    h2 {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+
+    p {
+      overflow: hidden;
+
+      display: block;
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+
+    ul {
+      margin-left: 2em;
+      margin-right: 2em;
+    }
+
+    li {
+      list-style-type: lower-roman;
+    }
+
+    blockquote {
+      white-space: pre-wrap;
+      text-align: center;
     }
   }
+}
+
+:local(.imageWrapper) {
+  display: block;
+  position: relative;
+
+  height: 30vw;
+
+  margin-right: -2em;
+  margin-left: -2em;
+
+  img {
+    transform: translateY(~"calc(-0.1 * var(--scroll))");
+
+    width: 100%;
+  }
+}
+
+
+:local(.imageInner) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

@@ -1,10 +1,8 @@
-import { linear } from '../helper/transform';
+import { linear, ease } from '../helper/transform';
 
-const topMax  = 250,
-      topMin  = 50,
-      topDiff = topMax - topMin;
+const duration = 300;
 
-export const scroll = (
+export const  scroll = (
   state = { scroll : 0 },
   action
 ) => {
@@ -18,34 +16,34 @@ export const scroll = (
 
   case 'RELOAD':
     return {
-      state,
+      ...state,
       ...getHeaderScroll(state, state.scroll)
     };
 
   default:
     return {
-      state,
+      ...state,
       ...getHeaderScroll(state, state.scroll)
     };
   }
 };
 
 function getHeaderScroll(state, position) {
-  if (topDiff <= state.scroll && topDiff <= position) {
-    return state;
-  }
-  return getHeaderScrollState(Math.min(position, topDiff));
+  return getHeaderScrollState(position, state.scroll);
 }
 
 function getHeaderScrollState(position) {
   return {
-    headerTranslate            : -1 * position,
-    headerFontSize             : linear(4, 2, topDiff, position),
-    headerLogoScale            : linear(1, 0.2, topDiff, position),
-    headerLogoWrapperWidth     : linear(250, 50, topDiff, position),
-    headerLogoWrapperTranslate : linear(55, 10, topDiff, position),
-    headerTitleScale           : linear(1, 0.4, topDiff, position),
+    headerTranslate            : linear(0, -200, duration)(position),
+    // -1 * Math.min(position, duration),
+    headerFontSize             : linear(4, 1, duration)(position),
+    headerLogoScale            : linear(1, 0.2, duration)(position),
+    headerLogoWrapperWidth     : linear(250, 50, duration)(position),
+    headerLogoWrapperTranslate : linear(5, -1, duration)(position),
+    headerTitleScale           : linear(1, 0.4, duration)(position),
+    headerTranslateX           : linear(0, -25, duration)(position),
+    headerFontScale            : linear(1, 0.1, duration)(position),
 
-    sideMenuTranslate : linear(200, 0, topDiff, position)
+    sideMenuTranslate : linear(16, 0, 600)(position)
   };
 }

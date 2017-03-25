@@ -1,25 +1,72 @@
+:local {
+  .className {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
 
-:local(.className) {
-  background-color: #ccccca;
-
-
-  position: fixed;
-  right: 0;
-  top: 50px;
-  bottom: 0;
-
-  padding: 1em;
-
-  transform : translate3d(0px, 200px, 0px);
-
-  ul {
+    // padding: 1em 0 1em 1em;
     margin: 0;
+
     list-style-type: none;
     -webkit-padding-start: 0;
-    li {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      width: 100%;
+
+      background-color: #ffffff;
+
+      @border-radius : 2em;
+      @border-color : #ccccca;
+
+      border-top: 1px solid @border-color;
+      border-bottom: 1px solid @border-color;
+      border-left: 1px solid @border-color;
+
+      border-top-left-radius: @border-radius;
+      border-bottom-left-radius: @border-radius;
+      border-top-left-radius: @border-radius;
+      border-bottom-left-radius: @border-radius;
+
+      box-shadow: 2px 1px 2px 0px black;
+
+      margin: .2em 0 .2em 0;
+      padding: .1em 5em .1em .2em;
+      min-height: 2em;
+
+
+      font-size: .9em;
+      text-decoration: none;
+      color: #000000;
+      white-space: nowrap;
+
+      transition: .3s ease transform;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      transform: translateX(10.5em);
+
+      i {
+        margin-left: .5em;
+        margin-right: .5em;
+      }
+
+      &:hover {
+        transform: translateX(4em);
+      }
+
       &::first-letter {
         font-family: "minster", Helvetica, Arial, serif;
         font-size: 1.5em;
+      }
+
+      &:local(.active) {
+        transform: translateX(2em);
       }
     }
   }

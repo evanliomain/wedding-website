@@ -28,6 +28,7 @@ export class Content extends Component {
 
   handleScroll(event) {
     this.props.onScrollChange(event.srcElement.body.scrollTop);
+    document.body.style.setProperty('--scroll', `${event.srcElement.body.scrollTop}px`);
   }
 
   componentDidMount() {

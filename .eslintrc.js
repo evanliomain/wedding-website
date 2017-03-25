@@ -110,7 +110,7 @@ module.exports = {
     "no-with"  : "error", // disallow with statements
     "radix"  : "error", // enforce the consistent use of the radix argument when using parseInt()
     "wrap-iife"  : "error", // require parentheses around immediate function invocations
-    "yoda"  : ["error", "always", { "exceptRange": true }], // require or disallow “Yoda” conditions
+    "yoda"  : ["error", "always", { "onlyEquality": true }], // require or disallow “Yoda” conditions
 
     // Variables
     "no-catch-shadow": "error", // disallow catch clause parameters from shadowing variables in the outer scope

@@ -1,4 +1,4 @@
-# Costumes obligatoires
+# [costume]Costumes obligatoires
 
 ## Respect de la thématique
 
@@ -20,17 +20,17 @@ Chaussures: pensez pratique également. Les bottes c’est bien mais ça tient c
 
 ## Locations et achat de costumes / accessoires
 
-* [Amstreet](https://armstreetfrance.com)
-* [Boutique Epées](https://www.boutique-epees.fr/156-vetements-medievaux)
-* [Échoppe Médiévale](http://www.boutiquemedievale.fr/fr/Costumes-Medievaux/?gclid=Cj0KEQjwqfvABRC6gJ3T_4mwspoBEiQAyoQPkVv6S2r21vNboLpQKtftrEa4df1ETTL_gFggTJKEdOYaAkil8P8HAQ)
-* [Boutique Médiévale et Fantastique](http://www.la-boutique-medievale-et-fantastique.fr/Vetements.php)
-* [Armurias](http://www.armurias.com/contents/fr/d19_seigneur_des_anneaux.html)
-* [Artisanat Médiéval](http://artisanatmedieval.free.fr/costume/costume.htm)
-* [Boutique Médiévale](http://www.boutique-medievale.com/univers-medieval-costumes-dinspiration-medievale-c-312_71.html?osCsid=r5cvdgsvhiospnok8dkc113ca1)
-* [Le Monde du GN](http://www.lemondedugn.com/)
-* [Boutique Médiévale 2](http://www.boutiquemedievale.fr/)
-* [Atelier Fantastique](http://www.atelierfantastique.com/)
-* [Chevalier Thibault](http://www.chevalier-thibault.com/boutique-medievale.html)
-* [Your dress maker](http://www.yourdressmaker.com/shop/fr/femme-1/dresses-by-themes-47/robes-renaissance-2/)
-* [Costumes Renaissance](http://www.costumesrenaissance.net/3-bourgeoisie-c102x2819300)
-* [Rêves d'Acier](http://www.revesdacier.com/boutique/index.php)
+* [Amstreet](Ehttps://armstreetfrance.com)
+* [Boutique Epées](Ehttps://www.boutique-epees.fr/156-vetements-medievaux)
+* [Échoppe Médiévale](Ehttp://www.boutiquemedievale.fr/fr/Costumes-Medievaux/?gclid=Cj0KEQjwqfvABRC6gJ3T_4mwspoBEiQAyoQPkVv6S2r21vNboLpQKtftrEa4df1ETTL_gFggTJKEdOYaAkil8P8HAQ)
+* [Boutique Médiévale et Fantastique](Ehttp://www.la-boutique-medievale-et-fantastique.fr/Vetements.php)
+* [Armurias](Ehttp://www.armurias.com/contents/fr/d19_seigneur_des_anneaux.html)
+* [Artisanat Médiéval](Ehttp://artisanatmedieval.free.fr/costume/costume.htm)
+* [Boutique Médiévale](Ehttp://www.boutique-medievale.com/univers-medieval-costumes-dinspiration-medievale-c-312_71.html?osCsid=r5cvdgsvhiospnok8dkc113ca1)
+* [Le Monde du GN](Ehttp://www.lemondedugn.com/)
+* [Boutique Médiévale 2](Ehttp://www.boutiquemedievale.fr/)
+* [Atelier Fantastique](Ehttp://www.atelierfantastique.com/)
+* [Chevalier Thibault](Ehttp://www.chevalier-thibault.com/boutique-medievale.html)
+* [Your dress maker](Ehttp://www.yourdressmaker.com/shop/fr/femme-1/dresses-by-themes-47/robes-renaissance-2/)
+* [Costumes Renaissance](Ehttp://www.costumesrenaissance.net/3-bourgeoisie-c102x2819300)
+* [Rêves d'Acier](Ehttp://www.revesdacier.com/boutique/index.php)

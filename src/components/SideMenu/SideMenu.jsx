@@ -1,26 +1,26 @@
 import React, { PropTypes } from 'react';
 
-import { NavLink } from '../NavLink/NavLink';
-
 import { className } from './SideMenu.less';
-
-import ReactMarkdown from 'react-markdown';
-import navigation from '../../content/00_navigation.md';
+import { roseDesVents, costume, lodging } from './icons.less';
 
 export const SideMenu = props => <div
-  style={{ transform : `translate3d(0px, ${props.sideMenuTranslate}px, 0px)` }}
   className={className}>
-  <ReactMarkdown source={navigation} renderers={renderers} />
+  <a href="#">
+    <i className={roseDesVents} />
+    <span>Accueil</span>
+  </a>
+  <a href="#costume">
+    <i className={costume} />
+    <span>Costumes</span>
+  </a>
+  <a href="#lodging">
+    <i className={lodging} />
+    <span>Hébergement</span>
+  </a>
 </div>;
 
 SideMenu.propTypes = {
   sideMenuTranslate : PropTypes.number
 };
 
-const renderers = {
-  link : props => <NavLink
-    activeClassName="active"
-    to={props.href}>
-    {props.children}
-  </NavLink>
-};
+  // style={{ transform : `translateY(${props.sideMenuTranslate}vw)` }}

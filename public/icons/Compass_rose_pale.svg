@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="440" height="440" viewBox="-220 -220 440 440">
+  <g class="rose">
+    <g id="e">
+      <g id="d">
+        <g id="c">
+          <use xlink:href="#a" transform="rotate(11.25)" id="b"/>
+          <use xlink:href="#b" transform="rotate(22.5)"/>
+        </g>
+        <use xlink:href="#c" transform="rotate(45)"/>
+      </g>
+      <use xlink:href="#d" transform="rotate(90)"/>
+    </g>
+    <use xlink:href="#e" transform="scale(-1)"/>
+    <circle r="7" fill="#000000"/>
+    <g fill="none" stroke="#000000" stroke-width="8">
+      <circle r="75"/>
+      <circle r="211"/>
+    </g>
+    <g stroke="#000000" fill="none">
+      <circle r="71"/>
+      <circle r="79"/>
+      <circle r="94"/>
+      <circle r="152"/>
+      <circle r="164"/>
+      <circle r="207"/>
+    </g>
+    <g id="i">
+      <g id="h">
+        <g id="g">
+          <path d="M39.416 95.16c-5.766 8.79-8.656 15.34-10.486 22.02-13.69-3.75-15.39 9.97-5.89 13.82-9.33 14.8-15.2 42.93-23.04 81V103a103 103 0 0 0 39.416-7.84z" fill="#000000" stroke="#000000" id="f"/>
+          <use xlink:href="#f" fill="#616161" transform="scale(-1 1)"/>
+          <path d="M-91.11377306 136.3611425a164 164 0 0 0 59.1190513 24.48791284c-15.63840692 3.53557-27.7117793 5.24544707-47.22074874 30.3940079 3.9877933-31.5776425-3.3403045-41.32387163-11.89830256-54.88192073z" fill="#000000" stroke="#000000"/>
+        </g>
+        <use xlink:href="#g" transform="rotate(45)"/>
+      </g>
+      <use xlink:href="#h" transform="rotate(90)"/>
+    </g>
+    <use xlink:href="#i" transform="scale(-1)"/>
+  </g>
+</svg>

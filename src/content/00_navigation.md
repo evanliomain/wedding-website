@@ -1,3 +1,3 @@
-* [Accueil](/)
-* [Costumes](/costume)
-* [Hébergement](/lodging)
+[Accueil](/)
+[Costumes](/costume)
+[Hébergement](/lodging)
