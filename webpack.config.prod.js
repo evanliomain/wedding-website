@@ -48,6 +48,57 @@ module.exports = {
         'less-loader',
         'postcss-loader'
       ]
+    }, {
+      test : /\.(png)$/i,
+      use  : [{
+        loader  : 'file-loader',
+        options : {
+          hash   : 'sha512',
+          digest : 'hex',
+          name   : '[name]-[hash].[ext]'
+        }
+      }, {
+        loader  : 'image-webpack-loader',
+        options : {
+          progressive : true,
+          gifsicle    : { interlaced : false },
+          optipng     : { optimizationLevel : 7 }
+        }
+      }]
+    }, {
+      test : /\.json$/,
+      use  : [{
+        loader : 'json-loader'
+      }]
+    }, {
+      test : /\.md$/,
+      use  : [{
+        loader : 'raw-loader'
+      }]
+    }, {
+      test : /\.svg$/,
+      use  : [
+        'babel-loader',
+        {
+          loader  : 'react-svg-loader',
+          options : {
+            svgo : {
+              plugins        : [{
+                cleanupIDs           : false,
+                removeTitle          : true,
+                removeElementsByAttr : [{
+                  class : [
+                    'layout-background',
+                    'layout-limit',
+                    'layout-grid'
+                  ]
+                }]
+              }]
+            }
+          }
+        }
+      ]
+
     }]
   },
 
