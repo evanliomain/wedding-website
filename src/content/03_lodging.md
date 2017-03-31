@@ -4,6 +4,4 @@ Pour votre venue à la seigneurie d'Alleray, vous aurez la possibilité de campe
 Donc pensez à apporter votre tente.
 Pour des raisons d'organisation, merci de nous prévenir si c'est la solution que vous choisissez.
 
-Si vous aspirez à d'autre confort, voici une liste non-exhaustive des possibilités du coin :
-
-* Carrefour de l'Ormeau; M. Gaubert et Mme Peyron; Mondoubleau, 7,5 km; 02 54 80 93 76
+Si vous aspirez à d'autre confort, des gîtes et chambres d'hôte sont disponible aux alentours.
