@@ -12,7 +12,7 @@ module.exports = {
     './src/index.jsx'
   ],
   output : {
-    path       : path.resolve(__dirname, './doc'),
+    path       : path.resolve(__dirname, './docs'),
     filename   : 'js/[name].bundle.js',
     publicPath : ''
   },
@@ -49,7 +49,7 @@ module.exports = {
         options : {
           hash   : 'sha512',
           digest : 'hex',
-          name   : 'img/[name]--[hash:base64:5].[ext]',
+          name   : 'img/[name]--[hash:base64:5].[ext]'
         }
       }, {
         loader  : 'image-webpack-loader',
