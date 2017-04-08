@@ -2,7 +2,8 @@
 /* eslint-disable camelcase */
 
 const path    = require('path'),
-      webpack = require('webpack');
+      webpack = require('webpack'),
+      CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context : path.resolve(__dirname, '.'),
@@ -12,17 +13,8 @@ module.exports = {
   ],
   output : {
     path       : path.resolve(__dirname, './dist'),
-    filename   : '[name].bundle.js',
-    publicPath : '/assets'
-  },
-
-  // devtool   : 'inline-source-map',
-  devtool   : 'source-map',
-  devServer : {
-    contentBase : path.resolve(__dirname, './src'),
-
-    // match the output `publicPath`
-    publicPath : '/assets'
+    filename   : 'js/[name].bundle.js',
+    publicPath : ''
   },
 
   resolve : {
@@ -38,13 +30,15 @@ module.exports = {
         options : { presets : ['latest', 'stage-3', 'react'] }
       }]
     }, {
-      test : /\.css$/,
-      use  : ['style-loader', 'css-loader', 'postcss-loader']
-    }, {
       test : /\.less$/,
       use  : [
         'style-loader',
-        { loader : 'css-loader', options : { importLoaders : 1 } },
+        {
+          loader  : 'css-loader',
+          options : {
+            localIdentName : '[path][name]__[local]--[hash:base64:5]'
+          }
+        },
         'less-loader',
         'postcss-loader'
       ]
@@ -55,14 +49,31 @@ module.exports = {
         options : {
           hash   : 'sha512',
           digest : 'hex',
-          name   : '[name]-[hash].[ext]'
+          name   : 'img/[name]--[hash:base64:5].[ext]',
         }
       }, {
         loader  : 'image-webpack-loader',
         options : {
           progressive : true,
-          gifsicle    : { interlaced : false },
           optipng     : { optimizationLevel : 7 }
+        }
+      }]
+    }, {
+      test : /\.(jpg)$/i,
+      use  : [{
+        loader  : 'file-loader',
+        options : {
+          hash            : 'sha512',
+          digest          : 'hex',
+          name            : 'img/[name]--[hash:base64:5].[ext]'
+        }
+      }, {
+        loader  : 'image-webpack-loader',
+        options : {
+          progressive : true,
+          mozjpeg     : {
+            quality : 100
+          }
         }
       }]
     }, {
@@ -98,7 +109,16 @@ module.exports = {
           }
         }
       ]
-
+    }, {
+      // Fonts. Enforce having 'fonts' segment in path to prevent
+      // matching svg image files as fonts
+      test : /(^(.*[\\\/])*font[\\\/]).*\.(svg|ttf|eot|woff(2)?)(\?+.*)?$/,
+      use  : [{
+        loader  : 'file-loader',
+        options : {
+          name : 'fonts/[name]--[hash:base64:5].[ext]'
+        }
+      }]
     }]
   },
 
@@ -130,6 +150,12 @@ module.exports = {
         keep_fnames : true
       },
       comments : false
-    })
+    }),
+
+    new CopyWebpackPlugin([{
+      from : '*.html'
+    }, {
+      from : 'public/**/*'
+    }])
   ]
 };

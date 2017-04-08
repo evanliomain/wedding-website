@@ -1,20 +1,25 @@
 import React, { PropTypes } from 'react';
 
 import { className } from './SideMenu.less';
-import { roseDesVents, costume, lodging } from './icons.less';
+
+import RoseDesVentsIcon from './Compass_rose_pale.svg';
+import CostumeIcon      from './Coat_of_Arms_of_Judenburg.svg';
+import LodgingIcon      from './home.svg';
+
+const iconSize = 25;
 
 export const SideMenu = props => <div
   className={className}>
   <a href="#">
-    <i className={roseDesVents} />
+    <RoseDesVentsIcon width={iconSize} height={iconSize} />
     <span>Accueil</span>
   </a>
   <a href="#costume">
-    <i className={costume} />
+    <CostumeIcon width={iconSize} height={iconSize} />
     <span>Costumes</span>
   </a>
   <a href="#lodging">
-    <i className={lodging} />
+    <LodgingIcon width={iconSize} height={iconSize} />
     <span>Hébergement</span>
   </a>
 </div>;

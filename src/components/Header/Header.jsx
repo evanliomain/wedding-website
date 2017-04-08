@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react';
 import { className, logoWrapper, titleWrapper, contentContainer, toolbar }
 from './Header.less';
 
-
 export class Header extends Component {
 
   render() {

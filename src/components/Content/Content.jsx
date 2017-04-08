@@ -6,7 +6,6 @@ import SideMenuContainer from '../../containers/SideMenuContainer';
 
 import { className } from './Content.less';
 
-
 import logoUrl from './blazon.png';
 
 export class Content extends Component {
