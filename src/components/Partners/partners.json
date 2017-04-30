@@ -1,0 +1,21 @@
+[{
+  "name" : "French touch",
+  "link" : "http://www.djpourmariages.com",
+  "logo" : "public/image/logos/frenchtouch.png",
+  "desc" : "French Touch mixe pour des mariages depuis plusieurs années et cette expérience unique développe continuellement un savoir-faire pour vous garantir une soirée riche en couleurs et en émotions."
+}, {
+  "name" : "Acta Repro",
+  "link" : "http://www.france-imprimeries.fr/imprimeur-acta-reprographie.php",
+  "logo" : "",
+  "desc" : "Que l’on aspire à mettre en avant sa boutique à l’aide de prospectus ou encore donner en cadeau un habit ou un mug fantaisie à un ami, quantité de choses vont requérir les talents d’un imprimeur professionnel."
+}, {
+  "name" : "L'ateliers des Vertugadins",
+  "link" : "http://www.vertugadins.com",
+  "logo" : "public/image/logos/vertugadins.png",
+  "desc" : "Stylisme et création de maquette, fabrication, habillage, location : Les Vertugadins s'illustrent dans tous les métiers du costume. Il nous est possible de gérer vos projets de A à Z, depuis le concept jusqu'à l'habillage."
+}, {
+  "name" : "Agil Percherons",
+  "link" : "http://www.agil-percherons.fr",
+  "logo" : "public/image/logos/agil_percherons.png",
+  "desc" : "AGIL Percherons a pour vocation de valoriser les chevaux percherons, en s'appuyant sur la polyvalence de ces remarquables chevaux de trait."
+}]
