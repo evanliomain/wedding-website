@@ -43,3 +43,5 @@ Chaussures : pensez pratique également. Les bottes c’est bien mais ça tient 
 * [Your dress maker](Ehttp://www.yourdressmaker.com/shop/fr/femme-1/dresses-by-themes-47/robes-renaissance-2/)
 * [Costumes Renaissance](Ehttp://www.costumesrenaissance.net/3-bourgeoisie-c102x2819300)
 * [Rêves d'Acier](Ehttp://www.revesdacier.com/boutique/index.php)
+* [L’ateliers des Vertugadins](Ehttp://www.vertugadins.com)
+* [Bienvenue dans mon grenier, troupe viking, vendant des accessoires](Ehttps://www.facebook.com/groups/1893053714272912)
