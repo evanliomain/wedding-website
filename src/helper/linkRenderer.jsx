@@ -1,7 +1,6 @@
 import { createElement } from 'react';
 
 export const linkRenderer = props => {
-  console.log(props);
   const properties = {
     href : props.href,
     key  : props.nodeKey
