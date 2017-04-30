@@ -19,7 +19,7 @@ La Fantasy est vivement acceptée tant que l’on reste dans un minimum de réal
 ## Pensez pratique !
 
 En été il fait chaud : attention à la matière du costume.
-Pensez aux accessoires : Ils font tout le travail d’habillage.
+Pensez aux accessoires : ils font tout le travail d’habillage.
 
 Mesdames : attention à la longueur (n'hésitez pas à mettre un ourlet, même temporaire), car sinon vous risquez de tacher votre joli costume ou de vous emmêler dedans… et oui, de nombreuses danses sont prévues !
 
