@@ -1,5 +1,7 @@
+import { DEFAULT_TAB } from './defaultValues';
+
 export const tab = (
-  state = { tab : 'gite' },
+  state = { tab : DEFAULT_TAB },
   action
 ) => {
   switch (action.type) {

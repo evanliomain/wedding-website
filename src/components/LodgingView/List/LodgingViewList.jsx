@@ -14,6 +14,11 @@ export class LodgingViewList extends Component {
     return <div className={`${this.props.className} ${wrapper}`}>
       <ul className={tabsClass}>
         <li
+          className={'all' === this.props.tab && activeClass}
+          onClick={() => this.props.onLodgingTabChange('all')}>
+          Tout
+        </li>
+        <li
           className={'gite' === this.props.tab && activeClass}
           onClick={() => this.props.onLodgingTabChange('gite')}>
           Gîte

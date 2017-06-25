@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import { LODGINGS } from './positions';
+import { LODGINGS } from '../../data/positions';
 
 import { LodgingViewMap } from './Map/LodgingViewMap'
 import { LodgingViewList } from './List/LodgingViewList'
@@ -15,17 +15,18 @@ import {
 
 export class LodgingView extends Component {
   render() {
+    console.log('LodgingView', this.props.lodgings);
     return <li  className={containerElementClass}>
-      <LodgingViewMap
-        className={mapElementClass}
-        lodgings={LODGINGS}>
-      </LodgingViewMap>
       <LodgingViewList
         className={listElementClass}
-        lodgings={LODGINGS}
+        lodgings={this.props.lodgings}
         tab={this.props.tab}
         onLodgingTabChange={type => this.props.onLodgingTabChange(type)}>
       </LodgingViewList>
+      <LodgingViewMap
+        className={mapElementClass}
+        lodgings={this.props.lodgings}>
+      </LodgingViewMap>
     </li>;
   }
 }

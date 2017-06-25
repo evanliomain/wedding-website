@@ -4,7 +4,10 @@ import { lodgingTabChange } from '../actions';
 
 import { LodgingView } from '../components/LodgingView/LodgingView';
 
-const mapStateToProps = state => state.app.tab,
+const mapStateToProps = state => ({
+        ...state.app.tab,
+        ...state.app.lodgings
+      }),
       mapDispatchToProps = dispatch => ({
         onLodgingTabChange : tab => {
           dispatch(lodgingTabChange(tab));

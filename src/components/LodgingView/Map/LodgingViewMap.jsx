@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import { withGoogleMap, GoogleMap, Marker, Circle } from 'react-google-maps';
 import withScriptjs from 'react-google-maps/lib/async/withScriptjs';
 
-import { ALLERAY } from '../positions';
+import { ALLERAY } from '../../../data/positions';
 
 // Wrap all `react-google-maps` components with `withGoogleMap` HOC
 // and name it GettingStartedGoogleMap
