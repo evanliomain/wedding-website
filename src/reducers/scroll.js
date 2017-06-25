@@ -2,7 +2,7 @@ import { linear, ease } from '../helper/transform';
 
 const duration = 300;
 
-export const  scroll = (
+export const scroll = (
   state = { scroll : 0 },
   action
 ) => {
