@@ -47,23 +47,25 @@ export class LodgingViewList extends Component {
           className={
             `${lodgingElement} ${getElementActiveClass(this.props.selectedLodging, lodging)}`
           }
+          onMouseEnter={() => this.props.onElementHover(lodging)}
+          onMouseLeave={() => this.props.onElementHover(undefined)}
           onClick={() => this.props.onElementClick(lodging)}>
           <div>
-            {lodging.name}
+            <span>{lodging.name}</span>
             <span className={propertyClass}>
               &nbsp;à {lodging.city}
             </span>
+            <span className={propertyClass}>
+              à {lodging.distance}
+            </span>
+            {lodging.nb && <span className={propertyClass}>
+              pour {lodging.nb} personnes
+            </span>}
           </div>
-          <span className={propertyClass}>
-            à {lodging.distance}
-          </span>
           <div className={propertyClass}>
             <span>Tel: </span>
             <span>{lodging.phone.join(', ')}</span>
           </div>
-          {lodging.nb && <span className={propertyClass}>
-            pour {lodging.nb} personnes
-          </span>}
           <p>
             {lodging.description}
           </p>
@@ -75,7 +77,8 @@ export class LodgingViewList extends Component {
 
 LodgingViewList.propTypes = {
   onLodgingTabChange : PropTypes.func,
-  onElementClick : PropTypes.func
+  onElementClick : PropTypes.func,
+  onElementHover : PropTypes.func
 };
 
 

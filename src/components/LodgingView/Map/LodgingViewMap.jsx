@@ -36,13 +36,13 @@ const AsyncGettingStartedExampleGoogleMap = withScriptjs(
           <Circle
             key={index}
             center={lodging.position}
-            radius={getRadius(props.selectedLodging, lodging)}
+            radius={getRadius(props, lodging)}
             options={{
               fillColor     : getCircleColor(lodging.type),
               fillOpacity   : 0.20,
               strokeColor   : getCircleColor(lodging.type),
               strokeOpacity : 1,
-              strokeWeight  : getStrokeWeight(props.selectedLodging, lodging)
+              strokeWeight  : getStrokeWeight(props, lodging)
             }}
           />
         )}
@@ -74,19 +74,21 @@ export class LodgingViewMap extends Component {
       onMapClick={() => {}}
       lodgings={this.props.lodgings}
       selectedLodging={this.props.selectedLodging}
+      hoverLodging={this.props.hoverLodging}
     />;
   }
 }
 
-function getRadius(selectedLodging, lodging) {
-  return isLodgingSelect(selectedLodging, lodging) ? 500 : 300;
+function getRadius(props, lodging) {
+  return isLodgingFocus(props, lodging) ? 500 : 200;
 }
 
-function getStrokeWeight(selectedLodging, lodging) {
-  return isLodgingSelect(selectedLodging, lodging) ? 3 : 1;
+function getStrokeWeight(props, lodging) {
+  return isLodgingFocus(props, lodging) ? 3 : 1;
 }
 
 
-function isLodgingSelect(selectedLodging, lodging) {
-  return selectedLodging && selectedLodging.id === lodging.id;
+function isLodgingFocus(props, lodging) {
+  return props.selectedLodging && props.selectedLodging.id === lodging.id ||
+         props.hoverLodging    && props.hoverLodging.id    === lodging.id;
 }

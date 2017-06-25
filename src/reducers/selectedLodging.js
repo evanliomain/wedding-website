@@ -1,5 +1,8 @@
 export const selectedLodging = (
-  state = { selectedLodging : undefined },
+  state = {
+    selectedLodging : undefined,
+    hoverLodging : undefined
+  },
   action
 ) => {
   switch (action.type) {
@@ -7,6 +10,12 @@ export const selectedLodging = (
     return {
       ...state,
       selectedLodging : action.lodging
+    };
+
+  case 'LODGING_HOVER':
+    return {
+      ...state,
+      hoverLodging : action.lodging
     };
 
   default:

@@ -20,14 +20,17 @@ export class LodgingView extends Component {
         className={listElementClass}
         lodgings={this.props.lodgings}
         selectedLodging={this.props.selectedLodging}
+        hoverLodging={this.props.hoverLodging}
         tab={this.props.tab}
         onLodgingTabChange={type => this.props.onLodgingTabChange(type)}
-        onElementClick={lodging => this.props.onLodgingSelected(lodging)}>
+        onElementClick={lodging => this.props.onLodgingSelected(lodging)}
+        onElementHover={lodging => this.props.onLodgingHover(lodging)}>
       </LodgingViewList>
       <LodgingViewMap
         className={mapElementClass}
         lodgings={this.props.lodgings}
-        selectedLodging={this.props.selectedLodging}>
+        selectedLodging={this.props.selectedLodging}
+        hoverLodging={this.props.hoverLodging}>
       </LodgingViewMap>
     </li>;
   }
@@ -35,5 +38,6 @@ export class LodgingView extends Component {
 
 LodgingView.propTypes = {
   onLodgingTabChange : PropTypes.func.isRequired,
-  onLodgingSelected : PropTypes.func.isRequired
+  onLodgingSelected : PropTypes.func.isRequired,
+  onLodgingHover : PropTypes.func.isRequired
 };

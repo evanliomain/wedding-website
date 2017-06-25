@@ -13,3 +13,8 @@ export const lodgingSelected = lodging => ({
   type : 'LODGING_SELECTED',
   lodging
 });
+
+export const lodgingHover = lodging => ({
+  type : 'LODGING_HOVER',
+  lodging
+});
