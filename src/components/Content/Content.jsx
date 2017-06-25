@@ -21,9 +21,10 @@ export class Content extends Component {
       <MainContentContainer>
         {this.props.children}
       </MainContentContainer>
-      <SideMenuContainer></SideMenuContainer>
     </div>;
   }
+  // TODO: implemente a new menu less buggy
+      // <SideMenuContainer></SideMenuContainer>
 
   handleScroll(event) {
     this.props.onScrollChange(event.srcElement.body.scrollTop);
