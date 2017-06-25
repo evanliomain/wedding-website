@@ -36,7 +36,25 @@ export class LodgingViewList extends Component {
       </ul>
       <ul className={lodgingList}>
         {this.props.lodgings.map((lodging, id) => <li key={id}>
-          {lodging.name}
+          <div>
+            {lodging.name}
+            <span className={propertyClass}>
+              &nbsp;à {lodging.city}
+            </span>
+          </div>
+          <span className={propertyClass}>
+            à {lodging.distance}
+          </span>
+          <div className={propertyClass}>
+            <span>Tel: </span>
+            <span>{lodging.phone.join(', ')}</span>
+          </div>
+          {lodging.nb && <span className={propertyClass}>
+            pour {lodging.nb} personnes
+          </span>}
+          <p>
+            {lodging.description}
+          </p>
         </li>)}
       </ul>
     </div>;
