@@ -31,17 +31,18 @@ const AsyncGettingStartedExampleGoogleMap = withScriptjs(
         onClick={props.onMapClick}
       >
         <Marker position={ALLERAY} />
+        {props.selectedLodging && <Marker position={props.selectedLodging.position} />}
         {props.lodgings.map((lodging, index) =>
           <Circle
             key={index}
             center={lodging.position}
-            radius={300}
+            radius={getRadius(props.selectedLodging, lodging)}
             options={{
               fillColor     : getCircleColor(lodging.type),
               fillOpacity   : 0.20,
               strokeColor   : getCircleColor(lodging.type),
               strokeOpacity : 1,
-              strokeWeight  : 1
+              strokeWeight  : getStrokeWeight(props.selectedLodging, lodging)
             }}
           />
         )}
@@ -72,6 +73,20 @@ export class LodgingViewMap extends Component {
       onMapLoad={() => {}}
       onMapClick={() => {}}
       lodgings={this.props.lodgings}
+      selectedLodging={this.props.selectedLodging}
     />;
   }
+}
+
+function getRadius(selectedLodging, lodging) {
+  return isLodgingSelect(selectedLodging, lodging) ? 500 : 300;
+}
+
+function getStrokeWeight(selectedLodging, lodging) {
+  return isLodgingSelect(selectedLodging, lodging) ? 3 : 1;
+}
+
+
+function isLodgingSelect(selectedLodging, lodging) {
+  return selectedLodging && selectedLodging.id === lodging.id;
 }

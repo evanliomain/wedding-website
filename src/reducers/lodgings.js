@@ -23,5 +23,6 @@ function getDefaultLodgings() {
 
 function filterLodgingBy(lodgingType) {
   return LODGINGS
+    .map((lodging, id) => ({ ...lodging, id }))
     .filter(({ type }) => 'all' === lodgingType || type === lodgingType);
 }

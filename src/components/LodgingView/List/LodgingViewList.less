@@ -8,24 +8,46 @@
   margin-top: 0;
   padding-left: 0;
   list-style-type: none;
+}
+:local(.lodgingElement) {
+  padding: 0.5em 1em;
+  border-left: 3px solid transparent;
 
-  li {
-    padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color ease 300ms;
 
-    cursor: pointer;
-    transition: background-color ease 300ms;
+  &:hover {
+    background-color: #FFEBEE;
+  }
 
-    &:hover {
-      background-color: #FFEBEE;
-    }
-
-    p {
-      margin-left: 1em;
-      font-size: 0.7em;
-      color: #9E9E9E;
-    }
+  p {
+    margin-left: 1em;
+    font-size: 0.7em;
+    color: #9E9E9E;
   }
 }
+
+:local(.lodgingAll):local(.activeClass),
+:local(.lodgingAll):hover {
+  border-bottom-color: #B71C1C;
+  background-color: lighten(#B71C1C, 30%);
+}
+:local(.lodgingGite):local(.activeClass),
+:local(.lodgingGite):hover {
+  border-bottom-color: #004D40;
+  background-color: lighten(#004D40, 30%);
+}
+:local(.lodgingChambresHotes):local(.activeClass),
+:local(.lodgingChambresHotes):hover {
+  border-bottom-color: #E65100;
+  background-color: lighten(#E65100, 30%);
+}
+:local(.lodgingHotel):local(.activeClass),
+:local(.lodgingHotel):hover {
+  border-bottom-color: #0D47A1;
+  background-color: lighten(#0D47A1, 30%);
+}
+
 :local(.tabsClass) {
   display: flex;
   flex-direction: row;
@@ -36,24 +58,21 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  li {
-    cursor: pointer;
-    padding: 0.5em 1em;
-    flex-grow: 1;
-
-    transition: background-color ease 300ms;
-
-    &:hover {
-      background-color: #FFEBEE;
-    }
-  }
 }
+
+:local(.tabClass) {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  flex-grow: 1;
+  transition: background-color ease 300ms;
+  border-bottom: 2px solid transparent;
+}
+
 
 :local(.propertyClass) {
   font-size: 0.8em;
   color: #616161;
 }
-:local(.activeClass) {
-  border-bottom: 1px solid #a32825;
+:local(.elementActiveClass) {
+  border-left-color: #a32825;
 }
