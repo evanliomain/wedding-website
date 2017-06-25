@@ -37,6 +37,7 @@ const AsyncGettingStartedExampleGoogleMap = withScriptjs(
             key={index}
             center={lodging.position}
             radius={getRadius(props, lodging)}
+            onClick={() => props.onElementClick(lodging)}
             options={{
               fillColor     : getCircleColor(lodging.type),
               fillOpacity   : 0.20,
@@ -72,12 +73,17 @@ export class LodgingViewMap extends Component {
       }
       onMapLoad={() => {}}
       onMapClick={() => {}}
+      onElementClick={lodging => this.props.onElementClick(lodging)}
       lodgings={this.props.lodgings}
       selectedLodging={this.props.selectedLodging}
       hoverLodging={this.props.hoverLodging}
     />;
   }
 }
+
+LodgingViewMap.propTypes = {
+  onElementClick : PropTypes.func
+};
 
 function getRadius(props, lodging) {
   return isLodgingFocus(props, lodging) ? 500 : 200;
