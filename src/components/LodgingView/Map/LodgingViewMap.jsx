@@ -54,7 +54,7 @@ const AsyncGettingStartedExampleGoogleMap = withScriptjs(
 export class LodgingViewMap extends Component {
   render() {
     return <AsyncGettingStartedExampleGoogleMap
-      googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp"
+      googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB0mtpJI92w72wy0seNQ4i9-2_dPg585Vw"
       loadingElement={
         <div
           className={this.props.className}
