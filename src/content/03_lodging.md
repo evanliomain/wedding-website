@@ -4,4 +4,4 @@ Pour votre venue à la seigneurie d'Alleray, vous aurez la possibilité de campe
 Donc pensez à apporter votre tente.
 Pour des raisons d'organisation, merci de nous prévenir si c'est la solution que vous choisissez.
 
-Si vous aspirez à d'autre confort, des gîtes et chambres d'hôte sont disponible aux alentours.
+Si vous aspirez à d'autres conforts, des gîtes et chambres d'hôte sont disponibles aux alentours.

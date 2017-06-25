@@ -28,17 +28,17 @@ export class LodgingViewList extends Component {
         <li
           className={`${tabClass} ${lodgingGite} ${getActiveClass('gite', this.props.tab)}`}
           onClick={() => this.props.onLodgingTabChange('gite')}>
-          Gîte
+          Gîtes
         </li>
         <li
           className={`${tabClass} ${lodgingChambresHotes} ${getActiveClass('chambres_hotes', this.props.tab)}`}
           onClick={() => this.props.onLodgingTabChange('chambres_hotes')}>
-          Chambre d'hôtes
+          Chambres d'hôtes
         </li>
         <li
           className={`${tabClass} ${lodgingHotel} ${getActiveClass('hotel', this.props.tab)}`}
           onClick={() => this.props.onLodgingTabChange('hotel')}>
-          Hôtel
+          Hôtels
         </li>
       </ul>
       <ul className={lodgingList}>
