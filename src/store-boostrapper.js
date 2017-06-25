@@ -1,6 +1,7 @@
 /* global module, require, process */
 
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { routerReducer } from 'react-router-redux';
 
 import reducers from './reducers';
@@ -11,7 +12,8 @@ export default function() {
     combineReducers({
       app     : reducers,
       routing : routerReducer
-    })
+    }),
+    applyMiddleware(thunk)
   );
 
   // Hot Module Replacement API

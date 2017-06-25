@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import { withGoogleMap, GoogleMap, Marker, Circle } from 'react-google-maps';
+import { withGoogleMap, GoogleMap, Marker, Circle, DirectionsRenderer } from 'react-google-maps';
 import withScriptjs from 'react-google-maps/lib/async/withScriptjs';
 
 import { ALLERAY } from '../../../data/positions';
@@ -31,7 +31,6 @@ const AsyncGettingStartedExampleGoogleMap = withScriptjs(
         onClick={props.onMapClick}
       >
         <Marker position={ALLERAY} />
-        {props.selectedLodging && <Marker position={props.selectedLodging.position} />}
         {props.lodgings.map((lodging, index) =>
           <Circle
             key={index}
@@ -47,6 +46,7 @@ const AsyncGettingStartedExampleGoogleMap = withScriptjs(
             }}
           />
         )}
+        {props.direction && <DirectionsRenderer directions={props.direction} />}
       </GoogleMap>
   )
 );
@@ -77,6 +77,7 @@ export class LodgingViewMap extends Component {
       lodgings={this.props.lodgings}
       selectedLodging={this.props.selectedLodging}
       hoverLodging={this.props.hoverLodging}
+      direction={this.props.direction}
     />;
   }
 }

@@ -31,7 +31,8 @@ export class LodgingView extends Component {
         lodgings={this.props.lodgings}
         selectedLodging={this.props.selectedLodging}
         hoverLodging={this.props.hoverLodging}
-        onElementClick={lodging => this.props.onLodgingSelected(lodging)}>
+        onElementClick={lodging => this.props.onLodgingSelected(lodging)}
+        direction={this.props.lodgingDirection}>
       </LodgingViewMap>
     </li>;
   }
