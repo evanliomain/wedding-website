@@ -45,7 +45,7 @@ export class LodgingViewList extends Component {
         {this.props.lodgings.map(lodging => <li
           key={lodging.id}
           className={
-            `${lodgingElement} ${getElementActiveClass(this.props.selectedLodging, lodging)}`
+            `${lodgingElement} ${getElementTypeClass(lodging)} ${getElementActiveClass(this.props.selectedLodging, lodging)}`
           }
           onMouseEnter={() => this.props.onElementHover(lodging)}
           onMouseLeave={() => this.props.onElementHover(undefined)}
@@ -90,4 +90,16 @@ function getElementActiveClass(selectedLodging, lodging) {
 
 function getActiveClass(type, tab) {
   return type === tab && activeClass
+}
+
+function getElementTypeClass(lodging) {
+  if ('gite'=== lodging.type) {
+    return lodgingGite;
+  }
+  if ('chambres_hotes'=== lodging.type) {
+    return lodgingChambresHotes;
+  }
+  if ('hotel'=== lodging.type) {
+    return lodgingHotel;
+  }
 }

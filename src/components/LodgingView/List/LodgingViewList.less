@@ -1,3 +1,8 @@
+@colorAll: #B71C1C;
+@colorGite: #004D40;
+@colorChambresHotes: #E65100;
+@colorHotel: #0D47A1;
+
 :local(.wrapper) {
   display: flex;
   flex-direction: column;
@@ -15,13 +20,10 @@
 :local(.lodgingElement) {
   padding: 0.5em 1em;
   border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
 
   cursor: pointer;
   transition: background-color ease 300ms;
-
-  &:hover {
-    background-color: #FFEBEE;
-  }
 
   p {
     margin-left: 1em;
@@ -32,24 +34,44 @@
 
 :local(.lodgingAll):local(.activeClass),
 :local(.lodgingAll):hover {
-  border-bottom-color: #B71C1C;
-  background-color: lighten(#B71C1C, 30%);
+  border-bottom-color: @colorAll;
+  background-color: lighten(@colorAll, 50%);
 }
 :local(.lodgingGite):local(.activeClass),
 :local(.lodgingGite):hover {
-  border-bottom-color: #004D40;
-  background-color: lighten(#004D40, 30%);
+  border-bottom-color: @colorGite;
+  background-color: lighten(@colorGite, 70%);
 }
 :local(.lodgingChambresHotes):local(.activeClass),
 :local(.lodgingChambresHotes):hover {
-  border-bottom-color: #E65100;
-  background-color: lighten(#E65100, 30%);
+  border-bottom-color: @colorChambresHotes;
+  background-color: lighten(@colorChambresHotes, 50%);
 }
 :local(.lodgingHotel):local(.activeClass),
 :local(.lodgingHotel):hover {
-  border-bottom-color: #0D47A1;
-  background-color: lighten(#0D47A1, 30%);
+  border-bottom-color: @colorHotel;
+  background-color: lighten(@colorHotel, 60%);
 }
+
+:local(.lodgingGite):local(.elementActiveClass),
+:local(.lodgingGite):hover {
+  border-left-color: @colorGite;
+  border-right-color: @colorGite;
+  background-color: lighten(@colorGite, 70%);
+}
+:local(.lodgingChambresHotes):local(.elementActiveClass),
+:local(.lodgingChambresHotes):hover {
+  border-left-color: @colorChambresHotes;
+  border-right-color: @colorChambresHotes;
+  background-color: lighten(@colorChambresHotes, 50%);
+}
+:local(.lodgingHotel):local(.elementActiveClass),
+:local(.lodgingHotel):hover {
+  border-left-color: @colorHotel;
+  border-right-color: @colorHotel;
+  background-color: lighten(@colorHotel, 60%);
+}
+
 
 :local(.tabsClass) {
   display: flex;
@@ -76,7 +98,4 @@
   font-size: 0.8em;
   color: #616161;
   margin-right: 0.2em;
-}
-:local(.elementActiveClass) {
-  border-left-color: #a32825;
 }
