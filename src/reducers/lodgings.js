@@ -5,9 +5,6 @@ export const lodgings = (
   state = { lodgings : getDefaultLodgings() },
   action
 ) => {
-  console.log('lodgings.state', state);
-  console.log('lodgings.action', action);
-
   switch (action.type) {
   case 'LODGING_TAB_CHANGE':
     return {
