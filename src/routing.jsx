@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import { Summary, Costume, Lodging } from './content';
 
+import { Costumes } from './components/Costumes/Costumes';
 import { Partners } from './components/Partners/Partners';
 
 import LodgingViewContainer from './containers/LodgingViewContainer';
@@ -16,6 +17,7 @@ export const getRoutingComponent = (storeInstance, history, RootComponent) =>
       <Costume />
       <Lodging />
       <LodgingViewContainer />
+      <Costumes />
       <Partners />
     </RootComponent>
   </Provider>;
