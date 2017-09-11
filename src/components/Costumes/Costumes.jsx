@@ -16,6 +16,9 @@ export const Costumes =
       <Parchment>
         <div className={local}>
           <h1 id="costumes">Inspirations de costumes</h1>
+          <p>
+            Merci à vous de ne pas utiliser ces photos à d'autres fins que celles de vous en inspirer, afin de respecter ces personnes qui ont acceptés que nous les prenions en photo dans ce but uniquement.
+          </p>
           {
             costumes.map(({ category, photos }, index) =>
               <div key={index}>

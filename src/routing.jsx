@@ -15,9 +15,9 @@ export const getRoutingComponent = (storeInstance, history, RootComponent) =>
     <RootComponent>
       <Summary id="summary" />
       <Costume />
+      <Costumes />
       <Lodging />
       <LodgingViewContainer />
-      <Costumes />
       <Partners />
     </RootComponent>
   </Provider>;
