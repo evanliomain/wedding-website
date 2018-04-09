@@ -39,7 +39,7 @@ function getHeaderScrollState(position) {
     headerFontSize             : linear(4, 1, duration)(position),
     headerLogoScale            : linear(1, 0.2, duration)(position),
     headerLogoWrapperWidth     : linear(250, 50, duration)(position),
-    headerLogoWrapperTranslate : linear(5, -1, duration)(position),
+    headerLogoWrapperTranslate : linear(4.5, -1, duration)(position),
     headerTitleScale           : linear(1, 0.4, duration)(position),
     headerTranslateX           : linear(0, -25, duration)(position),
     headerFontScale            : linear(1, 0.1, duration)(position),
