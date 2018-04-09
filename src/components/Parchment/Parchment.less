@@ -2,8 +2,6 @@
   display: block;
 
   > div {
-    padding-top: 1em;
-
     &::first-letter {
       font-family: "minster", Helvetica, Arial, serif;
       font-size: 3em;
@@ -48,13 +46,14 @@
   display: block;
   position: relative;
 
-  height: 30vw;
+  height: 20vw;
 
   margin-right: -2em;
   margin-left: -2em;
 
   img {
     transform: translateY(~"calc(-0.2 * var(--scroll))");
+    box-shadow: 0px -5px 2px 7px black;
 
     width: 100%;
   }
