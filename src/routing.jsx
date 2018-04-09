@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 
 // import { Router, Route, IndexRoute } from 'react-router';
 
-import { Summary, Costume, Lodging } from './content';
+import { Summary, Costume, Lodging, Cagnotte } from './content';
 
 import { Costumes } from './components/Costumes/Costumes';
 import { Partners } from './components/Partners/Partners';
@@ -14,6 +14,7 @@ export const getRoutingComponent = (storeInstance, history, RootComponent) =>
   <Provider store={storeInstance}>
     <RootComponent>
       <Summary id="summary" />
+      <Cagnotte />
       <Costume />
       <Costumes />
       <Lodging />
