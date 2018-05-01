@@ -2,11 +2,10 @@
 
 ## Respect de la thématique
 
-Couleurs à éviter:
+Couleurs à éviter :
 
-Marié : Noir dominant / Argent
-
-Mariée : Rouge-Blanc dominant / Or
+* Marié : Noir dominant / Argent
+* Mariée : Rouge-Blanc dominant / Or
 
 Notre thème nous tient à coeur, aussi nous vous demandons de bien vouloir jouer le jeu et de respecter notre souhait de réalisme, avec cependant la fantasy acceptée.
 

@@ -7,6 +7,7 @@ import { Parchment } from '../components/Parchment/Parchment';
 import { imageRenderer } from './imageRenderer';
 import { headingRenderer } from './headingRenderer';
 import { linkRenderer } from './linkRenderer';
+import { textRenderer } from './textRenderer';
 
 export const Page = content => props =>
   <Parchment {...props}>

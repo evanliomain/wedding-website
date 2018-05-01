@@ -15,7 +15,7 @@ import {
 
 export class LodgingView extends Component {
   render() {
-    return <li  className={containerElementClass}>
+    return <div  className={containerElementClass}>
       <LodgingViewList
         className={listElementClass}
         lodgings={this.props.lodgings}
@@ -34,7 +34,7 @@ export class LodgingView extends Component {
         onElementClick={lodging => this.props.onLodgingSelected(lodging)}
         direction={this.props.lodgingDirection}>
       </LodgingViewMap>
-    </li>;
+    </div>;
   }
 }
 

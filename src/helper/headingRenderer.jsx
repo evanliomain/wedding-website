@@ -14,7 +14,11 @@ export const headingRenderer = props => {
   return createElement(
     `h${props.level}`,
     properties,
-    params.children
+    createElement(
+      'span',
+      {},
+      params.children
+    )
   );
 }
 

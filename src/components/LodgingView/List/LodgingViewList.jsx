@@ -20,29 +20,29 @@ export class LodgingViewList extends Component {
   render() {
     return <div className={`${this.props.className} ${wrapper}`}>
       <ul className={tabsClass}>
-        <li
+        <div
           className={`${tabClass} ${lodgingAll} ${getActiveClass('all', this.props.tab)}`}
           onClick={() => this.props.onLodgingTabChange('all')}>
           Tout
-        </li>
-        <li
+        </div>
+        <div
           className={`${tabClass} ${lodgingGite} ${getActiveClass('gite', this.props.tab)}`}
           onClick={() => this.props.onLodgingTabChange('gite')}>
           Gîtes
-        </li>
-        <li
+        </div>
+        <div
           className={`${tabClass} ${lodgingChambresHotes} ${getActiveClass('chambres_hotes', this.props.tab)}`}
           onClick={() => this.props.onLodgingTabChange('chambres_hotes')}>
           Chambres d'hôtes
-        </li>
-        <li
+        </div>
+        <div
           className={`${tabClass} ${lodgingHotel} ${getActiveClass('hotel', this.props.tab)}`}
           onClick={() => this.props.onLodgingTabChange('hotel')}>
           Hôtels
-        </li>
+        </div>
       </ul>
       <ul className={lodgingList}>
-        {this.props.lodgings.map(lodging => <li
+        {this.props.lodgings.map(lodging => <div
           key={lodging.id}
           className={
             `${lodgingElement} ${getElementTypeClass(lodging)} ${getElementActiveClass(this.props.selectedLodging, lodging)}`
@@ -69,7 +69,7 @@ export class LodgingViewList extends Component {
           <p>
             {lodging.description}
           </p>
-        </li>)}
+        </div>)}
       </ul>
     </div>;
   }
