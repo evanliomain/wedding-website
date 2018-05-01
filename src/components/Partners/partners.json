@@ -1,4 +1,9 @@
 [{
+  "name" : "Saor Alba",
+  "link" : "https://www.saor-alba.fr/",
+  "logo" : "public/image/logos/saor-alba.png",
+  "desc" : "Troupe de reconstitution historique écossaise."
+}, {
   "name" : "French touch",
   "link" : "http://www.djpourmariages.com",
   "logo" : "public/image/logos/frenchtouch.png",
