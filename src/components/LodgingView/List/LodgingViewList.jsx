@@ -66,9 +66,9 @@ export class LodgingViewList extends Component {
             <span>Tel: </span>
             <span>{lodging.phone.join(', ')}</span>
           </div>
-          <p>
+          <div>
             {lodging.description}
-          </p>
+          </div>
         </div>)}
       </ul>
     </div>;
