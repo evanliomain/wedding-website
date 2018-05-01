@@ -44,3 +44,7 @@ Chaussures : pensez pratique également. Les bottes c’est bien mais ça tient 
 * [Rêves d'Acier](Ehttp://www.revesdacier.com/boutique/index.php)
 * [L’ateliers des Vertugadins](Ehttp://www.vertugadins.com)
 * [Bienvenue dans mon grenier, troupe viking, vendant des accessoires](Ehttps://www.facebook.com/groups/1893053714272912)
+* [Time Warp Shop : Créateurs de Bijoux, Cuir & Accessoires pour Voyageurs du temps](Ehttp://timewarpshop.fr)
+* [Larp Fashion](Ehttps://www.larp-fashion.fr)
+* [Saor Alba : Troupe de reconstitution historique écossaise](Ehttps://www.saor-alba.fr)
+
